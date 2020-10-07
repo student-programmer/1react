@@ -5,7 +5,8 @@ let MyPosts = () => {
   return (
     <div className={c.content}>
       My posts
-      <Post massage="Hi this my first phost"/>
+      <Post massage="Hi this my first phost" like="11" dislike="12"/>
+      <Post massage="Ok" like="1" dislike="3"/>
     </div>
   );
 };

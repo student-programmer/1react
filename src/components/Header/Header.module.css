@@ -9,3 +9,11 @@
       left:60px;
       position:absolute;
   }
+  .text{
+    position:absolute;
+    left:140px;
+    top:-5px;
+    font-size:30px;
+    color:#dea459;
+    font-family:sans-serif;
+  }

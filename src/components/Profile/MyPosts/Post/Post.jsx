@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import pc from "./Post.module.css";
 let Post = (props) => {
+
   return (
 
     <div className={pc.item}>

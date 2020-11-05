@@ -20,7 +20,7 @@
             { id: 2, message: 'How much did you earn?' },
             { id: 3, message: 'Five million dolars!' },
           ]
-      }
-     
+      },
+      sidebar:{}
   }
   export default state; 

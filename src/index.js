@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 let _callSubscriber = (_state) => {
     ReactDOM.render(
-    <React.StrictMode><BrowserRouter><App state={store.getState()} addPost={store.addPost.bind(store)} updateNewPostText={store.updateNewPostText.bind(store)}/> </BrowserRouter></React.StrictMode>,document.getElementById('root'));
+    <React.StrictMode><BrowserRouter><App state={store.getState()} dispatch={store.dispatch.bind(store)}/> </BrowserRouter></React.StrictMode>,document.getElementById('root'));
 }
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { addPsotActionCreator, updateNewPsotActionCreator } from '../../../Redux/state';
+import { addPsotActionCreator, updateNewPsotActionCreator } from '../../../Redux/profileReducer';
 import c from './MyPosts.module.css';
 import Post from './Post/Post';
 

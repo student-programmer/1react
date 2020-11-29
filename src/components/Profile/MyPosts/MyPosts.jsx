@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import { addPostActionCreator, updateNewPostActionCreator } from '../../../Redux/profileReducer';
 import c from './MyPosts.module.css';
-import MyPostsContainer from './MyPostsContainer';
 import Post from './Post/Post';
 
 
 
 
-let MyPosts = (props) => {
-  let postsElements = props.posts.map((p) => (
+const MyPosts = (props) => {
+  const postsElements = props.posts.map((p) => (
     <Post massage={p.message} like={p.likesCount} dislike={p.dislike} />
   ));
-    let newPostElement = React.createRef();
-  let addPost = () => {
+  const newPostElement = React.createRef();
+  const addPost = () => {
     props.addPost();
    
   }
 
-  let onPostChange = () => {
-    let text = newPostElement.current.value;
+  const onPostChange = () => {
+    const text = newPostElement.current.value;
     props.updateNewPostText(text) ;   
   }
   return (
@@ -35,4 +34,5 @@ let MyPosts = (props) => {
 
   );
 };
+
 export default MyPosts;

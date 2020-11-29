@@ -6,21 +6,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import  { Provider } from './StoreContext';
+import { Provider } from 'react-redux';
 
-let _callSubscriber = (_state) => {
     ReactDOM.render(
     <React.StrictMode><BrowserRouter>
     <Provider store = {store}>
         <App state={store.getState()} dispatch={store.dispatch.bind(store)} store={store}/>
      </Provider>
      </BrowserRouter></React.StrictMode>,document.getElementById('root'));
-}
 
 
-_callSubscriber(store.getState());   
 
-store.subscribe(_callSubscriber);
 
 
 // If you want your app to work offline and load faster, you can change

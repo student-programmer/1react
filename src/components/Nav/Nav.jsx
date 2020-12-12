@@ -20,6 +20,11 @@ let Nav = () => {
         </NavLink>
       </div>
       <div>
+        <NavLink to="/users" activeClassName={n.active}>
+          Users
+        </NavLink>
+      </div>
+      <div>
         <NavLink to="/music" activeClassName={n.active}>
           Music
         </NavLink>

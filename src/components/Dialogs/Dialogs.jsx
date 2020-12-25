@@ -38,7 +38,7 @@ let state = props.dialogsPage;
         <textarea onChange={onNewMessageChange} value = {newMessageBody} placeholder = "Enter your message" ref={newMessages}></textarea>
       </div>
       <div>
-        <button onClick={onSendMessageClick}>Send</button>
+        <button className={d.send}onClick={onSendMessageClick}>Send</button>
       </div>
     </div>
   );

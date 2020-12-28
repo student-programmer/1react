@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { followAC, setUsersAC, unfollowAC } from "../../Redux/usersReducer";
+import { follow, setUsers, unfollow, toogleIsFetching, setCurrentPage } from "../../Redux/usersReducer";
 import Users from "./Users";
 import preloader from "./../../asseds/images/preloader.gif";
 class UsersContainer extends React.Component{
@@ -28,25 +28,6 @@ class UsersContainer extends React.Component{
          currentPage:state.usersPage.currentPage,
          isFetching:state.usersPage.isFetching
      }
-
- }
- let mapDispatchToProps = (dispatch) =>{
-     return{
-        follow: (userId) =>{
-            dispatch(followAC(userId));
-        },
-        unfollow: (userId) =>{
-            dispatch(unfollowAC(userId));
-        },
-         setUsers: (users) =>{
-            dispatch(setUsersAC(users));
-        },
-        toogleIsFetching:(isFetching) =>{
-            dispatch(toogleIsFetchingAC(isFetching))
-        }
-        // setCurrentPage: (pageNumber) => {
-        //     dispatch({setCurrentPageAC(pageNumber)})
-        // }
-     }
- }
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+    }
+    export default connect(mapStateToProps,{follow, unfollow,setUsers,
+    toogleIsFetching,setCurrentPage})(UsersContainer);

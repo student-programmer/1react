@@ -7,11 +7,11 @@ const TOOGLE_IS_FETCHING = "TOOGLE_IS_FETCHING"
 
 let initialState = {
     users: [
-        { id: 1, photoUrl:"https://proof.kz/files/products/596px-LineartPresRev.300x300.png?d2484c1b162c4272ba3db90159945b50",
+        { id: '/1', photoUrl:"https://proof.kz/files/products/596px-LineartPresRev.300x300.png?d2484c1b162c4272ba3db90159945b50",
          followed:true, fullname: "Roma", status: "i am a boss1", location: { city: "Simferopol", country:"Russia"} },
-        { id: 1, photoUrl:"https://proof.kz/files/products/596px-LineartPresRev.300x300.png?d2484c1b162c4272ba3db90159945b50",
+        { id: '/2', photoUrl:"https://proof.kz/files/products/596px-LineartPresRev.300x300.png?d2484c1b162c4272ba3db90159945b50",
          followed:false, fullname: "Ignat", status: "i am a boss2", location: { city: "Sevastopol", country:"Russia"} },
-        { id: 1, photoUrl:"https://proof.kz/files/products/596px-LineartPresRev.300x300.png?d2484c1b162c4272ba3db90159945b50", 
+        { id: '/3', photoUrl:"https://proof.kz/files/products/596px-LineartPresRev.300x300.png?d2484c1b162c4272ba3db90159945b50", 
         followed:true, fullname: "Vlad", status: "i am a boss3", location: { city: "Minsk", country:"Belarus"} },
         
       ],
@@ -58,9 +58,9 @@ let initialState = {
      }
     };
     
-export const followAC = (userId) =>({type: FOLLOW, userId})
-export const unfollowAC = (userId) =>({type: UNFOLLOW, userId})
-export const setUsersAC = (users) =>({type: SET_USERS, users})
-export const setCurrentPageAC = (currentPage) =>({type: SET_CURRENT_PAGE, currentPage})
-export const toogleIsFetchingAC = (isFetching) =>({type: TOOGLE_IS_FETCHING, isFetching})
+export const follow = (userId) =>({type: FOLLOW, userId})
+export const unfollow = (userId) =>({type: UNFOLLOW, userId})
+export const setUsers = (users) =>({type: SET_USERS, users})
+export const setCurrentPage = (currentPage) =>({type: SET_CURRENT_PAGE, currentPage})
+export const toogleIsFetching = (isFetching) =>({type: TOOGLE_IS_FETCHING, isFetching})
 export default usersReducer;
